@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Adams Uthman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<a href="index.html" class="logo"><strong>Adams Uthman</strong> <span></span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="About.html">About Me</a></li>
+										<li><a href="launchmodule.html">Launch Module</a></li>
+										<li><a href="module1.html">Object-Oriented Information Systems</a></li>
+										<li><a href="module2.html">Secure Software Development</a></li>
+
+					</ul>
+					
+				</nav>
+				
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>ARTEFACTS</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                                    <h2>Unit 1 - A python program with protected and unprotected variables.</h2>
+									<p><b>Instruction</b></p>
+									<p>Develop a Python program and apply protected and unprotected variables within it.</p>
+									<p>I wrote a program that has protected and unprotected variables as shown below</p>
+                                    <pre><code>
+
+# program to illustrate access modifiers of a class
+
+# super class
+class Super:
+    # public data member
+    var1 = None
+
+    # protected data member
+    _var2 = None
+
+    # private data member
+    __var3 = None
+
+    # constructor
+    def __init__(self, var1, var2, var3):
+        self.var1 = "Adams"
+        self._var2 = 22
+        self.__var3 = "AA"
+
+    # public member function
+    def displayPublicMembers(self):
+        # accessing public data members
+        print("Public/unprotected Variable is: ", self.var1)
+
+    # protected member function
+    def _displayProtectedMembers(self):
+        # accessing protected data members
+        print("Protected variable is: ", self._var2)
+
+    # private member function
+    def __displayPrivateMembers(self):
+        # accessing private data members
+        print("Private variable is: ", self.__var3)
+
+    # public member function
+    def accessPrivateMembers(self):
+        # accessing private member function
+        self.__displayPrivateMembers()
+
+
+# derived class
+class Sub(Super):
+
+    # constructor
+    def __init__(self, var1, var2, var3):
+        Super.__init__(self, var1, var2, var3)
+
+    # public member function
+    def accessProtectedMembers(self):
+        # accessing protected member functions of super class
+        self._displayProtectedMembers()
+
+
+# creating objects of the derived class
+obj = Sub("Geeks", 4, "Geeks !")
+
+# calling public member functions of the class
+obj.displayPublicMembers()
+obj.accessProtectedMembers()
+obj.accessPrivateMembers()
+
+# Object can access protected member
+print("The Student's age(which is a protected variable) is:", obj._var2)
+
+</code></pre>
+                                    <h2>Unit 2 - A pen potrait and a use case diagram for a driverless car</h2>
+                                    <p><b>Instruction</b></p>
+                                    <p>Write a pen portrait for a user of a driverless car. Create a use case model which captures 
+                                        the ways in which a user needs to interact with the software system.</p>
+                                    <p>With the aid of a website called draw.io I was able to develop a use case diagram for the software.</p>
+                                    
+                                    <h2>Unit 2 - Protected and Unprotected variables</h2>
+                                    <p><b>Instruction</b></p>
+                                    <p>Write a Python program to achieve basic employee-related functionality which includes retaining employee details and allowing an employee to book a day of annual leave. 
+                                        Extend the Python program you have now created to use protected and unprotected variables.</p>
+                                    <p><b>Solution</b></p>
+                                    <pre><code>
+
+from datetime import date
+
+class Employee():
+
+    def __init__(self, name, surname, dept):
+        self._name = name
+        self._surname = surname
+        self.dept = dept
+
+    def leave(self):
+        self.year = input("Enter the year of leave:")
+        self.month = input("Enter the month of leave:")
+        self.day = input("Enter the day of leave:")
+        return print(f"You asked for a leave on {self.day}/{self.month}/{self.year}")
+
+AD = Employee("Adams", "Uthman", "Engineering")
+
+print(f"{AD._name} {AD._surname} from {AD.dept}")
+AD.leave()
+
+</code></pre>
+                                    <h2>Unit 3 - State machine for a washing machine</h2>
+                                    <p><b>Instruction</b></p>
+                                    <p>Making reference to ‘The Unified Modeling Language Reference Manual Second Edition’, use the State Machine Diagram in Figure 3-7 to design a similar model for a washing machine.</p>
+                                    <p>With the aid of a website called draw.io I was able to develop a state machine diagram for a washing machine as shown below.</p>
+                                    <div class="row gtr-50 gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="images/new.jpg" alt="" /></span></div>
+									</div>
+                                    <h2>Unit 4 - implementation of a class diagram</h2>
+                                    <p><b>Instruction</b></p>
+                                    <p>Develop a class diagram using UML to support a system with basic employee-related functionality. This should include the retention of employee details and allowing an employee to book a day of annual leave. 
+                                        Develop the Python program to implement the class model.</p>
+                                    <p>Below is the class diagram and the code implementation</p>
+                                    <div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><img src="images/class_diagram.png" alt="" /></span></div>
+                                    <pre><code>
+class Employee:
+    def __init__(self, name, surname, position, rem_leave=30):
+        self.name = name
+        self.surname = surname
+        self.department = department
+        self.rem_leave = rem_leave  # Remaining leave
+
+class Employer:
+    def __init__ (self, employees=None):
+        self.employees = []
+
+    def add_employee(self, Person):  # Adds employee to the list of employees
+        self.employees.append(Person)
+
+    def book_leave(self, Person, days):  # Books leave for the employer
+        if Person.rem_leave == 0:
+            print("You have no leave left for this year.")
+        else:
+            leave = Person.rem_leave
+            Person.rem_leave = leave - days
+            print(f"You booked {days} of leave. You have {Person.rem_leave} days of leave left for this year.")
+
+manager = Employee ('Adams', 'Uthman', 'Manager')
+employer = Employer()
+employer.add_employee(manager)
+employer.book_leave(manager, 10)
+
+</code></pre>
+
+                                    <h2>Unit 5 - A Python program with polymorphism</h2>
+                                    <p><b>Instruction</b></p>
+                                    <p> Write a Python program with polymorphism that is usable within the summative assessment for the driverless car.</p>
+                                    <p>Below is the code</p>
+                                    <pre><code>
+class Vehicle():
+
+    def __init__(self, type, velocity, direction, lane):
+        self.type = type
+        self.velocity = velocity
+        self.direction = direction
+        self.lane = lane
+
+    def print_state(self):
+        print(f"The vehicle's velocity is {self.velocity} km/h, direction is {self.direction} and it is on lane {self.lane}.")
+
+# Vehicle types: 1. Automobile 2. SUV 3. Van 4. Truck 5. Other
+
+class Car(Vehicle):
+
+    def print_state(self):
+        print(f"The car's velocity is {self.velocity} km/h, direction is {self.direction} and it is on lane {self.lane}.")
+
+class Truck(Vehicle):
+
+    def print_state(self):
+        print(f"The truck's velocity is {self.velocity} km/h, direction is {self.direction} and it is on lane {self.lane}.")
+
+# Here, we have overridden the parent class' print_state() function in the child classes (Car and Truck).
+# However, we still call the method by the same name, even though it behaves (slightly) different. Note the small
+# difference in the output. This is a type of polymorphism, namely "method overriding".
+
+Audi = Car(1, 60, "N", 2)
+Scania = Truck(4, 30, "W", 1)
+
+for vehicle in (Audi, Scania):
+    vehicle.print_state()
+                                    </code></pre>
+							    </div>
+							</section>
+
+					</div>
+                
+				
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a href="#">adamsuthman1234@gmail.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Location</h3>
+									<span>Nigeria</span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/adams-uthman-2a59931a1/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
