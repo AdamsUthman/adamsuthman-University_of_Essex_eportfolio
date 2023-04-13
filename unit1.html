@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Adams Uthman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<a href="index.html" class="logo"><strong>Adams Uthman</strong> <span></span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="About.html">About Me</a></li>
+										<li><a href="launchmodule.html">Launch Module</a></li>
+										<li><a href="module1.html">Object-Oriented Information Systems</a></li>
+										<li><a href="module2.html">Secure Software Development</a></li>
+
+					</ul>
+					
+				</nav>
+				
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>UNIT 1: AN INTRODUCTION TO PYTHON PROGRAMMING</h1>
+										<h1>AND THE OO PROGRAMMING PARADIGM</h1>
+									</header>
+									<span class="image main"><img src="images/unit1.jpg" alt="" /></span>
+									<h2 id="content"></h2>
+									<p>Python and the Object-Oriented Programming Philosophy are introduced in the first unit. A programming paradigm based on the idea of object-orientation is called object-oriented programming. 
+										The fundamental concept is to match the software architecture to the fundamental realities of the application-specific reality. This unit also includes a Python class on classes and objects. 
+										Additionally, there will be a collaborative discussion on the article "The Power of ePortfolio Development" by Di Silvestro & Nadir in addition to a group discussion with students on the subject of "Factors Influencing Reusability" (2021).
+										Python and the idea of object orientation are the main topics of this unit. The key subjects covered were the syntax, object initialization, and how to access object variables.</p>
+									<P>In this unit, I gained knowledge on how to use protrected and unprotected variables in python. Unified Modeling Language (UML) and the significance of software reusability were two topics that caught my attention because I was unfamiliar with them. 
+										It helped me understand the fundamentals of OOP and how I might implement software reusability in my code.</P>
+									<h2>COLLABORATIVE DISCUSSION</h2>
+									<p><b>Instructions</b></p>
+									<p>Refer to the article by Padhy et al. (2018), specifically Table 1, where the authors present a list of factors which they consider influence the reusability of a piece of object-oriented software. In this collaborative discussion, 
+										you are required to prioritise this list, presenting your argument for the priorities assigned.</p>
+									
+									<p><b>Answer</b></p>
+									<p>
+										To advance the area of software engineering, create resilient software, and take advantage of the research and advancements that software engineers and developers have achieved up to this point, software reuse is a critical component.
+										From my understanding of the article by N. Padhy et al. (2018),  the following is the order of importance of the factors that affect reusability of a piece of OOP software. 
+									</p>
+									<div class="row">
+										<div class="col-15 col-12-small">
+											<ul>
+												<li>An algorithm used in the program (AP)</li>
+												<li>Models in the project (MP)</li>
+												<li>Design patterns (DP)</li>
+												<li>Modules in the program (MIP)</li>
+												<li>Test cases/test design (TCTD)</li>
+												<li>Used in the data project (UD)</li>
+												<li>Knowledge requirement (KR)</li>
+												<li>Requirement analysis (RA)</li>
+												<li>Documentation in project (DIP)</li>
+												<li>Architecture driven approach (ADP)</li>
+												<li>Service contracts (SC)</li>
+
+											</ul>
+									<h2 id="content">E-PORTFOLIO ACTIVITIES</h2>
+									<p><b>Instruction</b> </p>
+									<p> 
+										Review the article by Di Silvestro & Nadir (2021). Discuss one aspect of this article which you find unexpected.
+									</p>
+									<p>
+										The article by Di Silvestro & Nadir (2021) focused on two issues in adult education: how graduate adult educators may use ePortfolios to promote thoughtful and deeper learning in a graduate adult education program, and the dearth of published research on the use of ePortfolios in graduate adult education.
+										What surprised me the most in the article was how ePortfolio enables students gain self-confidence and find inner strengths. Prior to reading this article, I always believed that the only way you can be self-sufficient was to keep working and improving on my skills. 
+										However, after reading the article and working on my ePortfolio, I began to realize some of my strengths and weaknesses. This helped me become self-aware and confident in my skills.
+									</p>
+									
+									
+									<p>Develop a Python program and apply protected and unprotected variables within it.</p>
+									
+
+									<!-- Preformatted Code -->
+										<h3>Python Code</h3>
+										<pre><code>
+# program to illustrate access modifiers of a class
+
+# super class
+class Super:
+    # public data member
+    var1 = None
+
+    # protected data member
+    _var2 = None
+
+    # private data member
+    __var3 = None
+
+    # constructor
+    def __init__(self, var1, var2, var3):
+        self.var1 = "Adams"
+        self._var2 = 22
+        self.__var3 = "AA"
+
+    # public member function
+    def displayPublicMembers(self):
+        # accessing public data members
+        print("Public/unprotected Variable is: ", self.var1)
+
+    # protected member function
+    def _displayProtectedMembers(self):
+        # accessing protected data members
+        print("Protected variable is: ", self._var2)
+
+    # private member function
+    def __displayPrivateMembers(self):
+        # accessing private data members
+        print("Private variable is: ", self.__var3)
+
+    # public member function
+    def accessPrivateMembers(self):
+        # accessing private member function
+        self.__displayPrivateMembers()
+
+
+# derived class
+class Sub(Super):
+
+    # constructor
+    def __init__(self, var1, var2, var3):
+        Super.__init__(self, var1, var2, var3)
+
+    # public member function
+    def accessProtectedMembers(self):
+        # accessing protected member functions of super class
+        self._displayProtectedMembers()
+
+
+# creating objects of the derived class
+obj = Sub("Geeks", 4, "Geeks !")
+
+# calling public member functions of the class
+obj.displayPublicMembers()
+obj.accessProtectedMembers()
+obj.accessPrivateMembers()
+
+# Object can access protected member
+print("The Student's age(which is a protected variable) is:", obj._var2)
+
+</code></pre>
+									<h2>SKILLS/KNOWLEDGE GAINED</h2>
+										<div class="row">
+											<div class="col-15 col-12-small">
+												<ul>
+													<li>The various syntax used in defining python classes e.g.(__init__).</li>
+													<li>I also learnt about some fundamental concepts in the design process. e.g. (Abstraction, Encapsulation, Inheritance etc.</li>
+													<li>Objects are user-defined data types that has two components: attributes and behaviours.</li>
+												</ul>
+									<h2>REFERENCES</h2>
+									<p>Di Silvestro, F. & Nadir, H. (2021) The Power of ePortfolio Development to Foster Reflective and Deeper Learning in an Online Graduate Adult Education Program. <i>Adult Learning</i> 32(4): 154–164.</p>
+									<p>Padhy, N., Satapathy, S. & Singh R.P. (2018) State-of-the-Art Object-Oriented Metrics and Its Reusability: A Decade Review. <i>Smart Computing and Informatics</i> 431-441.</p>
+									<h4>Pagination</h4>
+									<ul class="pagination">
+										<li><a href="unit1.html" class="button small disabled">Prev</a></li>
+										<li><a href="unit1.html" class="page active">1</a></li>
+										<li><a href="unit2.html" class="page">2</a></li>
+										<li><a href="unit3.html" class="page">3</a></li>
+										<li><a href="unit4.html" class="page">4</a></li>
+										<li><a href="unit5.html" class="page">5</a></li>
+										<li><a href="unit6html" class="page">6</a></li>
+										<li><a href="unit7.html" class="page">7</a></li>
+										<li><a href="unit8.html" class="page">8</a></li>
+										<li><a href="unit9.html" class="page">9</a></li>
+										<li><a href="unit10.html" class="page">10</a></li>
+										<li><a href="unit11html" class="page">11</a></li>
+										<li><a href="unit12.html" class="page">12</a></li>
+										<li><a href="unit2.html" class="button small">Next</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+				
+				
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						
+						<section class="split">
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<h3>Email</h3>
+									<a href="#">adamsuthman1234@gmail.com</a>
+								</div>
+							</section>
+							<section>
+								<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<h3>Location</h3>
+									<span>Nigeria</span>
+								</div>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/adams-uthman-2a59931a1/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
